@@ -1,0 +1,199 @@
+@page {
+    size: letter;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+.customer-signature{
+    
+    height: 25px;
+    width: 150px;
+    bottom: 0px;
+    position: absolute;
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: grey;
+    left: 49px;
+    color: grey;
+}
+.dealer-stamp{
+    height: 25px;
+    width: 150px;
+    bottom: 0px;
+    position: absolute;
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+    border-color: grey;
+    right: 49px;
+    color: grey;
+}
+
+.tnc-header-border{
+    height: 80px;
+    width: 100%;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: grey;
+    margin: auto;
+    box-sizing: border-box;
+    position: relative;
+}
+.tnc-header{
+    position: relative;
+    top: -50px;
+    float: right;
+    right: 50px;
+}
+.certificate-page {
+    top: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    /* page-break-inside: avoid; */
+    box-sizing: border-box;
+    border-color: grey;
+}
+
+.footer-border {
+    height: 80px;
+    width: 100%;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: grey;
+    margin: auto;
+    /* page-break-inside: avoid; */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.footer-image {
+    position: relative;
+    bottom: 80px;
+}
+
+.border {
+    top: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 0 5px 0 5px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    /* page-break-inside: avoid; */
+    box-sizing: border-box;
+    border-color: grey;
+}
+.corner-top {
+    width: 0; 
+      height: 25px; 
+      border-top: 50px solid grey;
+      border-left: 50px solid transparent;
+    right:0;
+    margin-left:auto;
+    position: absolute;
+    top: 4px;
+  }
+  .corner-bottom{
+    width: 0; 
+      height: 26px; 
+      border-bottom: 50px solid grey;
+      border-left: 50px solid transparent;
+    right:0;
+    margin-left:auto;
+  }
+.heading-style {
+    color: grey;
+    font-size: 16px;
+    font-weight: bold;
+    font-size: 30.000000px;
+    font-family: ff1;
+}
+
+.titles-style {
+    color: grey;
+    font-size: 16px;
+    font-size: 25.000000px;
+    font-family: ff1;
+}
+
+.subType {
+    color: rgb(188, 22, 40);
+    font-size: 16px;
+    font-size: 25.000000px;
+    font-family: ff1;
+}
+
+.alignmiddle {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: text-bottom;
+    display: inline-block;
+    border: 5px solid;
+}
+
+.logo {
+    width: 100%;
+    height: 70px;
+}
+
+@media print {
+    .page-break {
+        height: 2px;
+        border-top: 1px solid #999;
+        margin-bottom: 13px;
+        page-break-after: always;
+    }
+}
+
+.terms {
+    color: black;
+    font-size: 9px;
+    font-family: ff1;
+}
+
+.terms-sub-heading {
+    color: black;
+    font-size: 18.000000px;
+    font-weight: bold;
+    font-family: ff1;
+}
+
+.terms-heading-style {
+    color: black;
+    font-weight: bold;
+    font-size: 20.000000px;
+    font-family: ff1;
+    text-align: center;
+}
+
+.invocie-heading {
+    color: black;
+    font-size: 16px;
+    font-size: 25.000000px;
+    font-family: ff1;
+}
+
+.invocie-data {
+    color: black;
+    font-size: 11px;
+    font-family: ff1;
+}
+
+
+
+.invoice_table {
+  border: 0.5px solid;
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>My Subscription Certificate</title>
+    <link rel="stylesheet" type="text/css" th:href="@{classpath:static/css/main.css}" />
+</head>
+
+<body>
+
+    <div class="certificate-page">
+        <br/>
+        <div class="corner-top"></div>
+
+        <div class="center">
+
+            <div class="heading-style">
+                <u> CCS Subscription Certificate </u>
+            </div>
+
+            <br/>
+
+            <img th:src="@{classpath:static/img/kin.png}" height="100px" width="200px" />
+        </div>
+
+        <div id="certificate">
+            <div>
+                <div class="titles-style">
+                    &nbsp;&nbsp; Dear
+                    <span th:text="${certificate?.customerName}"> </span>, </div>
+                <br/>
+                <div class="titles-style">
+                    &nbsp;&nbsp;&nbsp;&nbsp; This is to certify that your
+                    <span th:text="${certificate?.modelName}"> </span> with VIN
+                    <br/>
+
+                    <div class="center">
+                        <b>
+                            <span th:text="${certificate?.vinNumber}"> </span>
+                        </b>
+                        <br/> is covered under Connected Car Subscription Program
+                    </div>
+                    <br/>
+                </div>
+                <div class="center">
+                    <table align="center">
+                        <tr>
+                            <td>
+                                <img th:src="@{classpath:static/img/ccs.png}" height="100px" width="120px" /> </td>
+                            <td>
+                                <span class="subType" th:text="${certificate?.packageType}"> </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br/>
+                <div class="titles-style">
+                    <div class="center"> Applicable up to
+                        <span th:text="${certificate?.packageEndDate}"></span>
+                    </div>
+                    <br/> </div>
+                <div class="center">
+                    <div class="titles-style">Your own
+                        <span class="subType"> personalized maintenance </span> program </div>
+                </div>
+                <div class="titles-style">
+                    <table align="center" width="70%">
+
+                        <tbody>
+                            <tr>
+                                <td> Dealer Code </td>
+                                <td> : </td>
+                                <td th:text="${certificate?.dealerCode}"></td>
+
+                            </tr>
+                            <tr>
+                                <td> Program No. </td>
+                                <td> : </td>
+                                <td th:text="${certificate?.certificateNumber}"></td>
+
+                            </tr>
+                            <tr>
+                                <td> Purchase Date </td>
+                                <td> : </td>
+                                <td th:text="${certificate?.subscriptionPurchaseDate}"></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br/> *Whichever occurs first, under the
+                    <span class="subType"> terms and conditions </span> as given overleaf </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <footer style="page-break-after: always;">
+            <div class="center">
+                <div>
+                    <div class="footer-border"></div>
+                    <img class="footer-image" th:src="@{classpath:static/img/kinservice.png}" height="100px" width="200px" />
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+
+    <div class="page-break"></div>
+    <div>
+        <div class="tnc-header-border">
+            <img class="tnc-header" th:src="@{classpath:static/img/kinservice.png}" height="100px" width="200px" />
+        </div>
+    </div>
+    <div class="term-condition-page border">
+
+        <div class="center">
+            <div class="terms-heading-style">
+                <u>Terms and Conditions</u>
+            </div>
+        </div>
+        <div class="terms">Dear ASB Automobiles Private Limited (‘’You/ ‘Customer’),</div>
+        <br/>
+        <div class="terms">Congratulations on renewing your connected car subscription - your own personalized maintenance program.You have
+            chosen the 3 Years AC Care here in after referred to as “Program” This certificate explains the terms, conditions
+            &amp; limitations that Apply to this Program.We recommend you to keep this document in a safe place. Please note
+            that the features of the Program once chosen cannot be altered or amended.</div>
+        <br/>
+        <div class="terms-sub-heading">A.Coverage/Validity :</div>
+        <div class="terms">The program commences on 13/04/2022 and will remain valid till midnight of 12/04/2025 or 30,000 Kms whichever is
+            earlier.
+        </div>
+        <div class="terms">Unless transferred as per the terms of this Program, this Program can be availed only from the dealership from where
+            it has been purchased.</div>
+        <br/>
+        <div class="terms-sub-heading">B.What is covered ?</div>
+        <div class="terms">The Program covers the following:</div>
+        <div class="terms">1. Pre-paid Maintenance : 3 Yrs/30,000 Kms : Periodic Maintenance Schedule Services as defined in the latest Owner&apos;s
+            Manual for scheduled services including labour.</div>
+        <div class="terms"> It would cover replacement of Kia Genuine Parts &amp; recommended consumables (as defined in latest Owner&apos;s
+            Manual with specifications).</div>
+        <div class="terms"> Refer services covered matrix below (Kia India reserves the right to change frequency at its own discretion).</div>
+        <div class="terms">2. One time car care service of AC Evaporator Cleaning &amp; AC Disinfectant under AC Care</div>
+        <br/>
+        <div class="terms">Note
+            <span class="fs6"> : My Convenience program only covers the defined consumables, parts and labour as stated above; any other terms
+                not specified in Section B above including any other service or job is not covered under the scope of the
+                Program.
+            </span>
+        </div>
+        <div class="terms">The Program only covers
+            <span class="fc3">R Replace or Change items as defined in latest Owner’s Manual </span>(only exception to Wheel Balancing &amp;
+            Alignment) along with
+            <span class="fc3">chosen Car Care services.</span>
+        </div>
+        <div class="terms">Any other parts, consumables &amp; labour, which is not specified in Section B is not covered within the scope of
+            the Program ,Including cost of weight balances,and cost for these items have to be borne by customer at actuals.</div>
+        <div class="terms-sub-heading">C.What is not covered</div>
+        <div class="terms">i. This program does not cover</div>
+        <div class="terms">1. Any non-scheduled maintenance</div>
+        <div class="terms">a.Some examples include but are not limited to, replacement of brake pads / shoes, brake disc, suspension lower arms,
+            shock absorbers, belts, wiper rubber etc.</div>
+        <div class="terms">b.Damage caused to glass, lights, indicators, paints, internal or external trim, panel, body, wheels, tyres and tyre
+            tubes are not covered under scheduled maintenance services</div>
+        <div class="terms">c.Repair / replacement of parts related to mechanical / electrical failure</div>
+        <div class="terms">2. Additional parts replacement, adjustments and/ or repairs that may be required as a result of any modification
+            made to vehicle</div>
+        <div class="terms">3. Additional parts replacement, adjustments and/or repairs that may be required as a result of wear and tear, accident,
+            damages, loss, abuse or misuse</div>
+        <div class="terms">4. Additional parts replacement, adjustments and/ or repairs that may be required as a result of:</div>
+        <div class="terms">a.Failure to use the vehicle in accordance with the instructions contained in latest Owner&apos;s Manual</div>
+        <div class="terms">b.Failure to maintain proper level of fluids, lubricants, coolants, fuels or contamination of fluids/fuels</div>
+        <div class="terms">c.Failure to ensure that the vehicle is properly, regularly and punctually serviced in accordance with the instructions
+            and recommendations specified by Kia in the Owner’s manual</div>
+        <div class="terms">d.The vehicle has been serviced by entity other than an authorized dealer of KIA</div>
+        <div class="terms">e.Use of Non-Genuine Spare Parts (parts not specified / recommended by Kia)</div>
+        <div class="terms">f. Environmental damages. Examples include (but are not limited to), bird or animal excreta, industrial fallout,
+            airborne contaminants, tree sap, chemicals and other hazards</div>
+        <div class="terms">g.Wading through water with a level exceeding centre line of the wheels</div>
+        <div class="terms">h.Repairs &amp; parts replacement resulting from the use of contaminated fuel</div>
+        <div class="terms">5. Additional service or maintenance requirements as a result of vehicle being used under severe/unusual conditions
+            as defined in latest Owner&apos;s Manual.</div>
+        <div class="terms">6. Tyre or tyre tube replacements and repairs</div>
+        <div class="terms">7. Vehicle registration cost, statutory and government charges, motor vehicle insurance premiums or fuel, other consumables
+            not specified above etc.</div>
+        <div class="terms">8. Any repairs required as a result of continued operation of the vehicle once a defect or fault has occurred (including
+            loss of lubricants and coolant)</div>
+        <div class="terms">9. Any consequential loss, damage or liability incurred as a result of scheduled servicing, non-scheduled maintenance
+            or a mechanical failure (including personal liability)</div>
+        <div class="terms">10. Any claim caused by war, war like activities, civil disturbances, riots, natural calamities, nuclear waste or
+            nuclear material, etc.</div>
+        <div class="terms">ii. This program will cease to operate where the vehicle :</div>
+        <div class="terms">1. Has been modified from the manufacturer&apos;s original specifications.</div>
+        <div class="terms">2. Is being or has been used or tested in preparation for or participation in any form of motor sport.</div>
+        <div class="terms">3. Has not been serviced in accordance with the service requirements detailed under vehicle service requirements
+            in the Owner&apos;s Manual.</div>
+        <div class="terms">4. Odometer reading cannot be determined as accurately by virtue of it having been inoperative, tampered with or
+            removed from vehicle.</div>
+        <div class="terms">5. Is being used for a purpose for which car is not designed.</div>
+        <div class="terms">6. Is being used under harsh or severe conditions. Examples include but are not limited to, mining sites and rough
+            off-road use.</div>
+        <div class="terms-sub-heading">D.Transferability :</div>
+        <div class="terms">My Convenience Program can be transferred to another dealer chosen by the Customer For effecting the transfer, the
+            Customer will have to bear system administration fees</div>
+        <div class="terms">(Transfer Fees).</div>
+        <div class="terms">Transfer fees will be calculated as per the grid shown &gt;&gt;</div>
+        <div class="terms-sub-heading">E.Cancellation :</div>
+        <div class="terms">1.You can cancel the My Convenience Program at any time and seek refund of amount pending for the remaining services
+            subject to terms herein.</div>
+        <div class="terms">2.Exit Fees: Exit fees of Rs.1000 will be chargeable on cancellation of the program</div>
+        <div class="terms">3.Calculation of Refund Amount: 90% of the amount for remaining services not availed by Customer on date of cancellation.</div>
+        <div class="terms"> (It is clarified that costs towards complimentary offers are not included in the Refund Amount) When no service has
+            been availed: Rs 1000 (+GST)</div>
+        <div class="terms">3.1 When at least 1 service has been availed (including 1 complimentary service): 10% of the amount for remaining
+            services not availed by Customer on date of</div>
+        <div class="terms">Cancellation + Rs 1000 (+GST).</div>
+        <div class="terms-sub-heading">F.Jurisdiction:</div>
+        <div class="terms">All disputes and differences arising shall be settled mutually and in case no mutually acceptable settlement is arrived
+            at within 30 days of the said dispute, the same shall be subject to exclusive jurisdiction of courts in New Delhi
+            only.
+        </div>
+
+
+
+    </div>
+
+    <div class="footer">
+        <footer style="page-break-after: always;">
+            <div class="center">
+                <div>
+                    <div class="footer-border">
+                        <div class="customer-signature"> Customer Signature</div>
+                        <div class="dealer-stamp">Dealer Stamp</div>
+                        <div class="corner-bottom"></div>
+
+                    </div>
+                     <img class="footer-image" th:src="@{classpath:static/img/kinservice.png}" height="100px" width="200px" />
+
+                </div>
+
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

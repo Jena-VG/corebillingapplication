@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email</title>
+    <style>
+    .invocie-heading {
+    color: black;
+    font-size: 16px;
+    font-size: 25.000000px;
+    font-family: ff1;
+}
+
+    
+    </style>
+</head>
+<body>
+<div> 
+
+
+<table width="100%" align="center" cellspacing="0px" cellpadding="0px">
+<tr  >
+  <td  width="15%"> <img th:src="'cid:logo'" height="1px" width="1px"> </td>
+  <td  width="60%"    class="invocie-heading"> </td>
+  <td  width="25%" align="right">
+  		   
+     </td>
+</tr>
+<tr  >
+  <td  width="15%">   </td>
+  <td  width="60%"    class="invocie-heading"><center> Congradulations !! </center></td>
+  <td  width="25%" align="right">
+  		   
+     </td>
+</tr>
+<tr  >
+  <td  >  </td>
+ 
+  <td  align="right">
+  		  <center> 	Your Subscription to KIA CCS Serivices is Renewed successfully!!
+  		  		<br/>
+  		  		
+  		  		Please use the reference number given below for further communications
+  		  		
+  		  			<br/><b><span th:text="${emailDetails?.refNumber}"> </b>
+  		  
+  		  </center>
+     </td>
+      <td >   </td>
+</tr>
+<tr  >
+  <td  >  </td>
+  <td >   </td>
+  <td  align="right">
+  		  <center> Kia India Pvt.Ltd.
+   
+			  <br/>
+			  NH-44, Sy.No.151-2, Erramanchi Village, Penukonda (M),
+			  <br/>
+			  Anantapur District, Andhra Pradesh - 515164</b>
+  		  
+  		  </center>
+     </td>
+     
+</tr>
+
+</table>
+</div>
+</body>
+</html>

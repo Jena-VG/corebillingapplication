@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Tax Invoice</title>
+    <link rel="stylesheet" type="text/css" th:href="@{classpath:static/css/main.css}" />
+    
+</head>
+
+<body>
+
+<div>
+        <br/>
+        
+
+<table width="100%" align="center" cellspacing="0px" cellpadding="0px">
+
+<tr  >
+  <td  > <img th:src="@{classpath:static/img/kin.png}" height="50px" width="120px" /> </td>
+  <td      class="invocie-heading"><center> Tax Invoice </center></td>
+  <td    rowspan = "2" align="right">
+  		   <img th:src="${invoice?.qrCode}" alt="Image for QR" border="1" height="192px" width="192px" />
+  		   
+     </td>
+</tr>
+
+<tr>
+
+ <td> </td>
+ 
+ <td class="invocie-data"><center> IRN No.: <span th:text="${invoice?.irnNo}"> </span> </center></td>
+</tr>
+
+</table>
+
+
+<table width="100%" align="center" cellspacing="0px" cellpadding="0px" class="invoice_table">
+<tr class="invoice_table">
+ <td width="40%"  class="invoice_table"> Invocie No.    :  <span th:text="${invoice?.invoiceNo}"> </span> 
+ <br/>
+ 
+ Invoice Date     : <span th:text="${invoice?.invoiceDate}"> </span> 
+ 
+ 	
+ 
+  </td>
+ 
+ <td  class="invoice_table"> 
+ 
+ <span th:text="${invoice?.kiaAddress}"> </span> <br/>
+GSTN No : <span th:text="${invoice?.kiaGst}"> </span> 
+ 
+ </td>
+
+</tr>
+
+<tr class="invoice_table">
+  <td colspan="2" class="invoice_table"> 
+  
+     Customer Name   :  <span th:text="${invoice?.customerName}"> </span>  <br/>
+      
+     Customer Address : <span th:text="${invoice?.customerAddress}"> </span> <br/>
+      
+      
+      GST No-<span th:text="${invoice?.customerGst}"></span> 
+  
+  </td>
+
+</tr>
+</table>
+ 
+<table width="100%" align="center"  class="invoice_table" cellspacing="0px" cellpadding="0px" style="height:400px" >
+
+<thead class="invoice_table" style="border-top:0px">
+ <th class="invoice_table" style="border-top:0px"> S.No. </th>
+ <th class="invoice_table" style="border-top:0px"> Description </th>
+ <th class="invoice_table" style="border-top:0px"> Amount(Rs) </th>
+
+</thead>
+<tr class="invoice_table" style="border-bottom:0px" >
+ 
+ <td rowspan="4" class="invoice_table"> <center> 1 </center></td>
+ <td width="76%" class="invoice_table" style="height:100px;border-bottom:0px"> 
+ Towards Sale of <span th:text="${invoice?.packageDesc}"> </span> Subscription  for <span th:text="${invoice?.modelName}"> </span> 
+ 
+ <br/>
+ 
+ to VIN <span th:text="${invoice?.vinNo}"></span> 
+ 
+ <br/>
+ 
+ Valid upto <span th:text="${invoice?.packageEndDate}"></span> 
+  <br/> <br/>
+  
+</td>
+<td class="invoice_table"> &nbsp; </td>
+</tr>
+<tr  class="invoice_table" style="height:100px;border-top:0px">
+
+<td class="invoice_table" style="border-top:0px">
+ Net value of package
+  <br/>
+ SAC Code - HSN
+  <br/>
+ <span th:if="${invoice?.igst > 0}"> ST IGST - 18% </span>
+  <span th:if="${invoice?.igst == 0}"> ST SGST - 9%    </span>
+  <br/>
+  <span th:if="${invoice?.igst == 0}">     ST CGST - 9%  </span>
+ <br/><br/>
+ 
+ </td>
+ 
+ <td class="invoice_table" style="border-top:0px"> &nbsp; <span th:text="${invoice?.netValue}"></span> 
+ 
+ <br/><br/>
+ 
+ &nbsp;
+ <span th:if="${invoice?.igst > 0}"> <span th:text="${invoice?.igst}"></span> </span>
+ <span th:if="${invoice?.igst == 0}"><span th:text="${invoice?.sgst}"></span>  </span>
+  <br/>
+&nbsp;  <span th:if="${invoice?.igst == 0}">    <span th:text="${invoice?.cgst}"></span> </span>
+ 
+    </td>
+ 
+</tr>
+
+<tr class="invoice_table" style="height:100px">
+
+<td class="invoice_table">
+Tax Amount in Words
+ <br/>
+&nbsp;&nbsp;&nbsp;<span th:text="${invoice?.taxInWords}"></span> 
+</td>
+
+<td class="invoice_table">
+&nbsp; <span th:text="${invoice?.tax}"></span> 
+</td>
+
+</tr>
+
+<tr class="invoice_table" style="height:100px">
+
+<td class="invoice_table">  
+
+Total Invoice Amount in words
+ <br/>
+&nbsp;&nbsp;&nbsp; <span th:text="${invoice?.subPriceInWords}"></span> 
+
+</td>
+
+
+<td class="invoice_table">
+
+</td>
+
+
+
+</tr>
+
+</table>
+
+<br/><br/>
+
+<table width="100%" align="center" border = "0">
+
+<tr>
+
+  <td width="70%"> </td>
+  
+  <td>For Kia India Pvt. Ltd.  
+    <br/>
+   <img th:src="@{classpath:static/img/signature.png}" height="50px" width="100px" />
+   
+   <br/>
+   Authorized Signature
+   
+  </td>
+</tr>
+
+<tr>
+
+  <td>Kia India Pvt.Ltd.
+   
+  <br/>
+  NH-44, Sy.No.151-2, Erramanchi Village, Penukonda (M),
+  <br/>
+  Anantapur District, Andhra Pradesh - 515164
+  
+  
+   </td>
+  
+  <td> </td>
+</tr>
+</table>
+
+
+        
+    </div>
+ 
+
+   
+
+   </body>
+
+</html>
